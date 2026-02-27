@@ -32,15 +32,6 @@ Outputs printed to the console and two plots saved to the working directory:
 - `pi_convergence.png` -- estimate vs. sample size
 - `sampling_distributions.png` -- histograms + Q-Q plots for CLT verification
 
-## Sample Output
-
-```
-n =    100: pi ~ 3.120000, error = 0.021593
-n =   1000: pi ~ 3.164000, error = 0.022407
-n =  10000: pi ~ 3.153200, error = 0.011607
-n = 100000: pi ~ 3.139280, error = 0.002313
-```
-
 ## Key Results
 
 - Error decreases proportionally to 1/sqrt(n)
