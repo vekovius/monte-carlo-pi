@@ -1,17 +1,6 @@
-"""
-Samuel Vekovius
-28 September 2025
-CSC 4444
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
-
-"""
-(AI assisted) indicated in comments occasionally references an instance of myself clicking tab to complete code within VScode, which is not the
-only IDE with this feature as they all pretty much do--it is incredibly accurate/easy to use.
-"""
 
 def estimate_pi(n):
 
@@ -46,7 +35,7 @@ def convergence_study():
             error = abs(pi_est - np.pi)
             print(f"n = {n:7d}: π ≈ {pi_est:.6f}, error = {error:.6f}")
     
-    # Create convergence plot (AI assisted with plot styling)
+    # Create convergence plot
     plt.figure(figsize=(10, 6))
     plt.semilogx(n_values, pi_estimates, 'b-', alpha=0.7, label='π estimates')
     plt.axhline(y=np.pi, color='r', linestyle='--', linewidth=2, label=f'True π = {np.pi:.6f}')
@@ -68,7 +57,7 @@ def sampling_distribution_study():
     n_values = [1000, 10000, 100000]
     R = 500  # Number of repetitions for each n
     
-    # Set up figure with 2 rows and 3 columns (AI assisted with subplot layout)
+    # Set up figure with 2 rows and 3 columns
     fig, axes = plt.subplots(2, 3, figsize=(15, 10))
     fig.suptitle('Sampling Distribution of π Estimator (Central Limit Theorem)', fontsize=16)
     
@@ -109,7 +98,7 @@ def sampling_distribution_study():
         ax_hist.legend(fontsize=8)
         ax_hist.grid(True, alpha=0.3)
         
-        # Create Q-Q plot to assess normality (AI assisted with probplot styling/choice)
+        # Create Q-Q plot to assess normality
         ax_qq = axes[1, i]
         stats.probplot(pi_estimates, dist="norm", plot=ax_qq)
         ax_qq.set_title(f'Q-Q Plot (n = {n})')
@@ -130,7 +119,7 @@ def sampling_distribution_study():
 
 
 def main():
-    """Main function - runs all three parts of the analysis. (AI assisted with structure)"""
+    # Main function - runs all three parts of the analysis.
     print("=" * 50)
     print("Monte Carlo π Estimation Project")
     print("=" * 50)
